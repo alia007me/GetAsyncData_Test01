@@ -2,7 +2,7 @@
 {
     public abstract class GetAggregator
     {
-        public static Dictionary<string, string> Gen1DataCompositor = new();
+        public static Dictionary<string, string> PeopleData = new();
         public static Dictionary<string, string> RoleResponsibilities = new()
         {
             { "TeamLead", "Guides and mentors the development team, facilitates communication, and is responsible for the team's overall technical output and well-being." },
@@ -40,7 +40,7 @@
             Random random = new Random();
             HashSet<string> usedNames = new HashSet<string> { };
 
-            while (Gen1DataCompositor.Count < 301) // 300 new items + 1 initial item
+            while (PeopleData.Count < 301) // 300 new items + 1 initial item
             {
                 string firstName = firstNames[random.Next(firstNames.Length)];
                 string lastName = lastNames[random.Next(lastNames.Length)];
@@ -50,7 +50,7 @@
                 {
                     usedNames.Add(fullName);
                     string role = roles[random.Next(roles.Length)];
-                    Gen1DataCompositor.Add(fullName, role);
+                    PeopleData.Add(fullName, role);
                 }
             }
         }

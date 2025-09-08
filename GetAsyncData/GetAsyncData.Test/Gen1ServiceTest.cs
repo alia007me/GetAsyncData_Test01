@@ -13,16 +13,36 @@ namespace GetAsyncData.Test
             // Arrage
             var gen1Service = new Gen1Service();
             var timer = new Stopwatch();
-            var gen1Aggregator = new Gen1Aggregator();
             var roles = new string[] { "Developer", "ProductOwner" };
 
+            // Act
             timer.Start();
 
             var people = await gen1Service.GetPeopleData();
 
             timer.Stop();
 
-            //Assert.
+            // Assert
+            Assert.True(timer.ElapsedMilliseconds <= 10000);
+            var peopleInRoles = Gen1Aggregator.PeopleData.Where(c => roles.Contains(c.Value));
+            var excpectedPeople = peopleInRoles.Join(Gen1Aggregator.RoleResponsibilities,
+                                                     c => c.Value,
+                                                     c => c.Key,
+                                                     (left, right) =>
+                                                     {
+                                                         return (FullName:left.Key,Principle: right.Value);
+                                                     });
+            foreach (var excpectedPerson in excpectedPeople)
+            {
+                var computedPeople = people.Where(c => c.FullName == excpectedPerson.FullName);
+
+                Assert.NotEmpty(computedPeople);
+
+                foreach (var computedPerson in computedPeople)
+                {
+                    Assert.True(computedPerson.Principle == excpectedPerson.Principle);
+                }
+            }
         }
     }
 }
