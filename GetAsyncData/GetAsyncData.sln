@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36310.24 d17.14
+VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetAsyncData", "GetAsyncData\GetAsyncData.csproj", "{95EABC30-D621-4162-9B21-900BADE2659F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetAsyncData.Test", "GetAsyncData.Test\GetAsyncData.Test.csproj", "{EFD33A37-BE22-4397-A51C-ACEA49042ABA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{95EABC30-D621-4162-9B21-900BADE2659F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95EABC30-D621-4162-9B21-900BADE2659F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95EABC30-D621-4162-9B21-900BADE2659F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD33A37-BE22-4397-A51C-ACEA49042ABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD33A37-BE22-4397-A51C-ACEA49042ABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD33A37-BE22-4397-A51C-ACEA49042ABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD33A37-BE22-4397-A51C-ACEA49042ABA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
