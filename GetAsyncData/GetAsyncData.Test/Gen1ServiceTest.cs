@@ -34,6 +34,8 @@ namespace GetAsyncData.Test
                                                      });
             foreach (var excpectedPerson in excpectedPeople)
             {
+                Assert.NotNull(people);
+
                 var computedPeople = people.Where(c => c.FullName == excpectedPerson.FullName);
 
                 Assert.NotEmpty(computedPeople);
