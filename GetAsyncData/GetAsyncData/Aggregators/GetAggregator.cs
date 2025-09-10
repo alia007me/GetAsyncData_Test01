@@ -1,4 +1,4 @@
-﻿namespace GetAsyncData.Aggregators
+namespace GetAsyncData.Aggregators
 {
     public abstract class GetAggregator
     {
