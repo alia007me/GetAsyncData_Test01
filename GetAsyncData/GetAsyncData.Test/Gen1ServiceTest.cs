@@ -1,4 +1,4 @@
-﻿using GetAsyncData.Aggregators;
+using GetAsyncData.Aggregators;
 using GetAsyncData.Services;
 using System.Diagnostics;
 using Xunit;
