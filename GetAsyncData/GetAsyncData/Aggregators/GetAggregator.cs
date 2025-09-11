@@ -1,4 +1,4 @@
-﻿namespace GetAsyncData.Aggregators
+namespace GetAsyncData.Aggregators
 {
     public abstract class GetAggregator
     {
@@ -59,7 +59,7 @@
         {
             var delay = Task.Delay(1000);
 
-            var result = GetFullNamesByRoles(role);
+            var result = FindFullNames(role);
 
             await delay;
 

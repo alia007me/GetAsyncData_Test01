@@ -1,4 +1,4 @@
-﻿using GetAsyncData.Aggregators;
+using GetAsyncData.Aggregators;
 using GetAsyncData.Services;
 using System.Diagnostics;
 using Xunit;
@@ -18,7 +18,7 @@ namespace GetAsyncData.Test
             // Act
             timer.Start();
 
-            var people = await gen1Service.GetPeopleData();
+            var people = await gen1Service.GetPeopleData(roles);
 
             timer.Stop();
 
